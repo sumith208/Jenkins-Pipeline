@@ -2,27 +2,28 @@ pipeline {
     agent any
 
     stages {
+        stage('Compile') {
+            steps {
+                echo "Compiling the Code ......"
+                bat "mvn compile" // Use 'sh' if on Unix-based systems
+            }
+        }
         stage('Build') {
             steps {
                 echo "Building the Code ......"
-                bat "mvn clean"
+                bat "mvn clean" // Use 'sh' if on Unix-based systems
             }
         }
-         stage('Test') {
+        stage('Test') {
             steps {
                 echo "Testing the Code ......"
-                bat "mvn test"
+                bat "mvn test" // Use 'sh' if on Unix-based systems
             }
         }
-         stage('Compile') {
-            steps {
-                echo "Compiling the Code ......"
-                bat "mvn compile"
-            }
-        }
-         stage('Deploy') {
+        stage('Deploy') {
             steps {
                 echo "Deploying the Code ......"
+                // Add the deployment steps here, e.g., "bat 'deploy_command'"
             }
         }
     }
