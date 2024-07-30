@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SampleSuite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="firefox"/>
+  <parameter name="url" value="https://www.orangehrm.com/"/>
+  <test thread-count="5" name="Grouping2(failed)">
+    <classes>
+      <class name="sumith.com.Sample3">
+        <methods>
+          <include name="test2"/>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- sumith.com.Sample3 -->
+    </classes>
+  </test> <!-- Grouping2(failed) -->
+</suite> <!-- Failed suite [SampleSuite] -->
